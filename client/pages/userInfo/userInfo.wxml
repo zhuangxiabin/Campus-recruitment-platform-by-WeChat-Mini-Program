@@ -1,0 +1,89 @@
+<view class="page__bd">
+  <view class="weui-toptips weui-toptips_warn" wx:if="{{showTopTips}}">{{tips}}</view>
+    <!-- <view class="weui-cells__title">个人基础信息</view> -->
+      <view class="weui-cells weui-cells_after-title">
+            <view class="weui-cell weui-cell_input">
+                <view class="weui-cell__hd">
+                    <view class="weui-label">真实姓名</view>
+                </view>
+                <view class="weui-cell__bd">
+                    <input class="weui-input" placeholder="请输入真实姓名"  bindinput="inputNames" value='{{truthName}}'/>
+                </view>
+            </view>
+            <view class="weui-cell weui-cell_select">
+                <view class="weui-cell__hd weui-cell__hd_in-select-after">
+                    <view class="weui-label">性别</view>
+                </view>
+                <view class="weui-cell__bd">
+                    <picker bindchange="bindPickerChange" value="{{Index}}" range="{{sexy}}">
+                        <view class="weui-select weui-select_in-select-after">{{sex}}</view>
+                    </picker>
+                </view>
+            </view>
+            <view class="weui-cell weui-cell_select">
+                <view class="weui-cell__hd weui-cell__hd_in-select-after">
+                    <view class="weui-label">出生日期</view>
+                </view>
+                <view class="weui-cell__bd">
+                    <picker mode="date" value="{{date}}" start="1918-01-01" end="2000-01-01" bindchange="bindDateChange">
+                        <view class="weui-select weui-select_in-select-after">{{birthday}}</view>
+                    </picker>
+                </view>
+            </view>
+        </view>
+        <view class="weui-cells__title"></view>
+        <view class="weui-cells weui-cells_after-title">
+            <view class="weui-cell weui-cell_select">
+                <view class="weui-cell__hd weui-cell__hd_in-select-after">
+                    <view class="weui-label">最高学历</view>
+                </view>
+                <view class="weui-cell__bd">
+                    <picker bindchange="bindxueliChange" value="{{xueliIndex}}" range="{{xueli}}">
+                        <view class="weui-select weui-select_in-select-after">{{education}}</view>
+                    </picker>
+                </view>
+            </view>
+            <view class="weui-cell weui-cell_select">
+                <view class="weui-cell__hd weui-cell__hd_in-select-after">
+                    <view class="weui-label">工作年限</view>
+                </view>
+                <view class="weui-cell__bd">
+                    <picker bindchange="bindworkChange" value="{{workIndex}}" range="{{work}}">
+                        <view class="weui-select weui-select_in-select-after">{{worklife}}</view>
+                    </picker>
+                </view>
+            </view>
+        </view>
+        <view class="weui-cells__title"></view>
+        <view class="weui-cells weui-cells_after-title">
+            <view class="weui-cell weui-cell_input">
+                <view class="weui-cell__hd">
+                    <view class="weui-label">电话号码</view>
+                </view>
+                <view class="weui-cell__bd">
+                    <input class="weui-input" placeholder="请输入电话号码" bindinput="inputPhone" value='{{phoneNum}}'/>
+                </view>
+            </view>
+            <view class="weui-cell weui-cell_input">
+                <view class="weui-cell__hd">
+                    <view class="weui-label">联系邮箱</view>
+                </view>
+                <view class="weui-cell__bd">
+                    <input class="weui-input" placeholder="请输入邮箱" bindinput="inputEmail" value='{{email}}'/>
+                </view>
+            </view>
+        </view>
+        <view class="weui-cells__title">一句话介绍</view>
+        <view class="weui-cells weui-cells_after-title">
+            <view class="weui-cell">
+                <view class="weui-cell__bd">
+                    <textarea class="weui-textarea" placeholder="实现自己的价值" style="height: 3.3em" bindinput="inputIntroduce" value='{{introduce}}'/>
+                    <view class="weui-textarea-counter">{{introductionNum}}/58</view>
+                </view>
+            </view>
+        </view>
+
+        <view class="weui-btn-area">
+            <button class="weui-btn" type="primary" bindtap="showTopTips">保存</button>
+        </view>
+</view>

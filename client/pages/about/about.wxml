@@ -1,0 +1,21 @@
+<view class="page">
+    <view class="page__hd">
+        <view class="page__title">关于我们</view>
+        <view class="page__desc">格局招聘小程序是本人的毕业设计作品，所涉及的有关数据来源之网络，本系统在GitHub上开源，具体访问方式如下：</view>
+    </view>
+    <view class="page__bd page__bd_spacing">
+        <view class="kind-list">
+            <block wx:for="{{list}}" wx:key="id">
+                <view class="kind-list__item">
+                    <view id="{{item.id}}" class="weui-flex kind-list__item-hd {{item.open ? 'kind-list__item-hd_show' : ''}}" bindtap="copy{{item.id}}">
+                        <view class="weui-flex__item">{{item.name}}</view>
+                        <image class="kind-list__img" src="../../images/icon_nav_{{item.id}}.png"></image>
+                    </view>
+                </view>
+            </block>
+        </view>
+    </view>
+    <view class="page__ft">
+        <image src="../../images/icon_footer.png" style="width: 84px; height: 19px;"></image>
+    </view>
+</view>

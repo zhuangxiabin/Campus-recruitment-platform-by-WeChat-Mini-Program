@@ -1,0 +1,4 @@
+/* pages/skill/skill.wxss */
+slider{
+    margin-bottom: 30px;
+}

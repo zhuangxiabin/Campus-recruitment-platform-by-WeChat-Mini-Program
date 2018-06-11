@@ -1,0 +1,110 @@
+<!--我的页面-->
+<view class='after-authorization' >
+<view class="userinfo" bindtap="login" open-type="getUserInfo">
+    <view class="userinfo-name">
+        <text class="userinfo-nickname">{{logged ? userInfo.nickName : '点击登录'}}</text>  
+        <text class="no-login-text" >{{logged ? '发现自己的价值' : '查看更多消息'}}</text> 
+    </view>
+    <image
+            class="userinfo-avatar"
+            src="{{logged ? userInfo.avatarUrl : 'images/no-login.png'}}"
+            background-size="cover"
+    ></image>
+</view>
+
+<!-- 功能列表 -->
+
+<!-- <view class="item-cells">
+  <view class="item-cell item-cell-access" catchtap="resumeTap">
+    <view class="item-cell-bd">
+      <text>简历</text>
+    </view>
+    <view class="item-cell-ft"></view>
+  </view>
+</view> -->
+
+<view class="item-cells item-favorite">
+  <view class="item-cell item-cell-access" catchtap="movieToCollection">
+    <view class="item-cell-bd">
+      <text class="iconfont icon-favorite"></text>
+      <text>我的收藏</text>
+    </view>
+    <view class="item-cell-ft"></view>
+  </view>
+</view>
+
+ <view class="item-cells item-help">
+  <view class="item-cell item-cell-access" catchtap="movieToContact">
+    <view class="item-cell-bd">
+      <text class="iconfont icon-help"></text>
+      <text>意见反馈</text>
+    </view>
+    <view class="item-cell-ft"></view>
+  </view>
+</view> 
+
+<view class="item-cells item-code">
+  <view class="item-cell item-cell-access" catchtap="toScanCode">
+    <view class="item-cell-bd">
+      <text class="iconfont icon-code"></text>
+      <text>扫一扫</text>
+    </view>
+    <view class="item-cell-ft"></view>
+  </view>
+</view> 
+
+<view class="item-cells">
+  <view class="item-cell item-cell-access" catchtap="movieToAboutus">
+    <view class="item-cell-bd">
+      <text class="iconfont icon-about"></text>
+      <text>关于我们</text>
+    </view>
+    <view class="item-cell-ft"></view>
+  </view>
+</view> 
+
+ <!-- <view class="item-cells item-update">
+  <view class="item-cell item-cell-access" catchtap="deliveryComments">
+    <view class="item-cell-bd" >
+      <text class="iconfont icon-update"></text>
+      <text>发布职位</text>
+    </view>
+    <view class="item-cell-ft"></view>
+  </view>
+</view>  -->
+
+<!--退出当前账号  -->
+
+<view class='user-exit' wx:if="{{logged}}">
+  <view class='item-exit' bindtap='signout'>
+    <text>退出当前账号</text>
+  </view>   
+</view>
+
+<modal 
+  class="modal"
+  hidden="{{hiddenmodalput}}" 
+  title="确定退出当前账号？" 
+  confirm-text="确定"
+  cancel-text="取消" 
+  bindcancel="cancel"
+  bindconfirm="confirm"
+>  
+    
+</modal>
+
+</view>
+<!--第一次登录授权modal  -->
+<view class="modal-box" hidden="{{flag}}" bindtap='hide'>
+
+    <view class="modal-body">
+      <view class="iconfont icon-close" bindtap='hide'></view>
+      <view class="modal-content">
+        <text class='modal-title'>微信账号快速授权</text>
+        <!-- <view class='line'></view> -->
+        <!-- <image src="/image/1.png" class="fenxiang"></image> -->
+        <button type='primary' class="knowBtn" open-type="getUserInfo" bindgetuserinfo="getUserInfo">微信登录授权</button>
+     </view>
+    </view>
+</view>
+ 

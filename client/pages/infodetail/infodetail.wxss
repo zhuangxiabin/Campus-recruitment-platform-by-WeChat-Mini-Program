@@ -1,0 +1,103 @@
+/* pages/infodetail/infodetail.wxss */
+page{
+  font-size: 16px;
+}
+.uinn{
+  padding-left: 15px;
+  padding-right: 15px;
+}
+.page-pd{
+    padding : 0 16px;
+}
+.detail-header{
+    margin-bottom: 30px;
+    
+}
+.detail-title{
+    font-size: 25px;
+    font-weight: bold;
+    margin-bottom: 22px;
+    margin-top: 22px;
+}  
+.detail-banner{
+    background-color : #eeeeee; 
+}
+.detail-banner-img{
+   width: 100%;
+} 
+.detail-user{
+    width: 36px;
+    height: 36px;
+    background-color : #eeeeee; 
+    border-radius: 50%;
+    overflow: hidden;
+    margin-right: 12px;
+}
+/**
+ * 基础布局
+ */
+.fx-row{
+  display: flex;
+  flex-direction: row;
+}
+.fx-row-reverse{
+  flex-direction: row-reverse;
+}
+
+.fx-column{
+   display: flex;
+   flex-direction: column;
+}
+
+.fx-column-reverse{
+  flex-direction: column-reverse;
+}
+
+.fx-wrap{
+  flex-wrap: wrap
+}
+/**
+ * 垂直方向 子元素沿着侧轴排列
+ */
+ .fx-row-top{
+   align-items: flex-start
+ }
+ .fx-row-center{
+   align-items: center;
+ }
+  .fx-row-bottom{
+   align-items: flex-end;
+ }
+
+.fx-row-stretch {
+  align-items: stretch; }
+
+.fx-row-baseline {
+  align-items: baseline; 
+}
+
+image{
+  /* width: 100%; */
+  /* padding-left: 10px; */
+  margin-right: 10px;
+}
+.wxParse-h2{
+  font-size: 1.17em;
+  margin: .75em 0;
+  font-weight: bold
+}
+.lazy{
+  display:none;
+}
+.wxParse-p{
+  padding-top: 5px;
+  padding-bottom: 5px;
+}
+.wxParse-b.wxParse-inline{
+  font-size: 1.0em;
+  margin: .75em 0;
+  font-weight: bold
+}
+.WxEmojiView.wxParse-inline{
+  line-height: 20px;
+}

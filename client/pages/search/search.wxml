@@ -1,0 +1,58 @@
+<!-- <scroll-view class="wrap"> -->
+  
+  <!-- <view class="search">
+    <input placeholder="{{searchValue}}" bindinput="bindInput" />
+    <view class="search-btn" bindtap='bindSearch'>
+      <image src="../../images/search.png"></image>
+    </view>
+  </view> -->
+    <view class="weui-search-bar">
+        <view class="weui-search-bar__form">
+          <view class="weui-search-bar__box">
+              <icon class="weui-icon-search_in-box" type="search" size="14"></icon>
+              <input type="text" class="weui-search-bar__input" placeholder="{{searchValue}}" value="{{inputVal}}" focus="{{inputShowed}}" bindinput="inputTyping" bindconfirm="bindconfirm" />
+              <view class="weui-icon-clear" wx:if="{{inputVal.length > 0}}" bindtap="clearInput">
+                <icon type="clear" size="14"></icon>
+              </view>
+          </view>
+              <label class="weui-search-bar__label" hidden="{{inputShowed}}" bindtap="showInput">
+                <icon class="weui-icon-search" type="search" size="14"></icon>
+                <view class="weui-search-bar__text">搜索</view>
+              </label>
+        </view>
+              <view class="weui-search-bar__cancel-btn" hidden="{{!inputShowed}}" bindtap="hideInput">取消</view>
+    </view>
+    <scroll-view wx:if="{{jobList.length !== 0}}" class="wrap" scroll-y="true" scroll-x="false" style='height:{{windowHeight-48}}px' bindscrolltolower="scrolltolower" > 
+    <view class="job-list">
+      <block wx:for="{{jobList}}" wx:key="{{item}}">
+        <view class="item" bindtap="moveTodetail" data-id="{{item.id}}">
+          <view class="logo">
+            <image src="{{item.picUrl}}"></image>
+          </view>
+          <view class="desc">
+            <text class="title">{{item.title}}</text>
+            <text class="company">{{item.company}}</text>
+            <text class="claim">
+            <text class="city">{{item.city}}</text>
+            <text class="year"> {{item.year}}</text>
+            <text class="edu"> {{item.edu}}</text>
+            </text>
+          </view>
+          <view class="salary">
+            <text>{{item.salary}}</text>
+          </view>
+        </view>
+      </block>
+    </view>
+    <view class="weui-loadmore" hidden="{{showloadmore}}">
+      <view class="weui-loading"></view>
+      <view class="weui-loadmore__tips">正在加载</view>
+    </view>
+    <view class="weui-loadmore weui-loadmore_line" hidden="{{havadone}}">
+      <view class="weui-loadmore__tips weui-loadmore__tips_in-line">暂无数据</view>
+    </view>
+    </scroll-view>
+  <view  wx:if="{{jobList.length === 0}}" class="no-data">
+    <text>未找到相关数据</text>
+  </view>
+<!-- </scroll-view> -->

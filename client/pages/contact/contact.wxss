@@ -1,0 +1,14 @@
+/* pages/contact/contact.wxss */
+page{
+  background-color: white
+}
+.title{
+  font-size: 16px;
+  margin-top: 10px;
+  margin-bottom: 10px;
+  margin-left: 15px;
+  
+}
+button{
+  width: 60%
+}

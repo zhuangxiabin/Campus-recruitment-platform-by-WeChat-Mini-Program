@@ -1,0 +1,20 @@
+<!--pages/infodetail/infodetail.wxml-->
+<import src="../../wxParse/wxParse.wxml" />
+<view class="detail-banner">
+    <image catchtap="onPreImage"  data-img-src="{{titleImage}}" src="{{titleImage}}" mode="widthFix" class="detail-banner-img"  />  
+</view>
+<view class="detail-header page-pd">
+  <view class="detail-title page-pd">
+     <text class="">{{title}}</text>
+  </view>
+  <view   class="fx-row fx-row-center" style="color:gray;font-size:14px;">
+      <image  src="{{authorImage}}" mode="aspectFit" class="detail-user"  />
+      <text>{{authorName}}</text>
+   </view>
+</view>  
+<view class="container">
+  <view class='uinn'>
+    <template is="wxParse" data="{{wxParseData:article.nodes}}" />
+  </view>
+</view>
+

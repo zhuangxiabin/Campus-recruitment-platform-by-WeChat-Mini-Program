@@ -1,0 +1,19 @@
+<!--pages/skill/skill.wxml-->
+<view class="page">
+    <view class="page__hd">
+        <view class="page__title">技能自我评价</view>
+        <view class="page__desc">请客观的评价自己</view>
+    </view>
+
+    <view class="page__bd page__bd_spacing">
+        <view class="weui-cells__title">学习能力</view>
+        <slider show-value value='{{learnAbility}}' bindchange="listenerLearn"/>
+        <view class="weui-cells__title">抗压能力</view>
+        <slider show-value value="{{compressionAbility}}" bindchange="listenerCompression"/>
+        <view class="weui-cells__title">领导能力</view>
+        <slider show-value value="{{leaderAbility}}"  bindchange="listenerLeader"/>
+        <view class="weui-btn-area">
+            <button class="weui-btn" type="primary" bindtap="saveSkill">保存</button>
+        </view>
+    </view>
+</view>

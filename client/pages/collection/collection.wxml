@@ -1,0 +1,25 @@
+<!--pages/collection/collection.wxml-->
+<view class="job-list">
+      <block wx:for="{{list}}" wx:key="{{item}}">
+        <view class="item" bindtap="moveTodetail" data-id="{{item.id}}">
+          <view class="logo">
+            <image src="{{item.picUrl}}"></image>
+          </view>
+          <view class="desc">
+            <text class="title">{{item.title}}</text>
+            <text class="company">{{item.company}}</text>
+            <text class="claim">
+            <text class="city">{{item.city}}</text>
+            <text class="year"> {{item.year}}</text>
+            <text class="edu"> {{item.edu}}</text>
+            </text>
+          </view>
+          <view class="salary">
+            <text>{{item.salary}}</text>
+          </view>
+        </view>
+      </block>
+</view>
+<view  wx:if="{{!list}}" class="no-data">
+    <text>没有收藏内容</text>
+  </view>

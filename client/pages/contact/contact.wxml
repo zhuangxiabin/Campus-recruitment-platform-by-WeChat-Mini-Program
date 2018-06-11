@@ -1,0 +1,8 @@
+<!--pages/contact/contact.wxml-->
+<!-- <image src='../../images/contact.png'></image> -->
+<view class="deg">
+  <view class='title'>微信客服功能：</view>
+	<button open-type='contact'>联系客服</button>
+  <view class='title' >反馈邮箱:</view>
+  <button bindtap='copy'>复制邮箱地址</button>
+</view>

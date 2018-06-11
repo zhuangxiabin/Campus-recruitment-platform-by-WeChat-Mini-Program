@@ -1,0 +1,46 @@
+<view class="swiper-container">
+ <swiper autoplay="auto" interval="5000" duration="500" current="{{swiperCurrent}}" bindchange="swiperChange" class="swiper" style='height:{{swiperHeight}}px'>
+  <block wx:for="{{slider}}" wx:key="unique">
+   <swiper-item bindtap="swiperKey" data-key="{{item.key}}">
+    <image src="{{item.picUrl}}" class="img"></image>
+   </swiper-item>
+  </block>
+ </swiper> 
+ <view class="dots">
+  <block wx:for="{{slider}}" wx:key="unique">
+   <view class="dot{{index == swiperCurrent ? ' active' : ''}}"></view>
+  </block>
+ </view>
+ <!-- <view class="weui-loadmore weui-loadmore_line">
+   <view class="weui-loadmore__tips weui-loadmore__tips_in-line">为你推荐</view>
+</view> -->
+</view>
+<!-- <view class='space'></view> -->
+<!--消息列表  -->
+<scroll-view style='height:{{windowHeight-swiperHeight}}px' scroll-y='true' class='scroll'>
+ <view class="weui-loadmore weui-loadmore_line">
+   <view class="weui-loadmore__tips weui-loadmore__tips_in-line">为你推荐</view>
+</view> 
+<view class="info-list">
+    <block wx:for="{{infoList}}" wx:key="{{item}}">
+      <view class="item" bindtap="moveTodetail" data-slug="{{item.slug}}">
+          <view class="logo">
+            <image src="{{item.titleImage}}" mode="widthFix"></image>
+          </view>
+          <view class="desc">
+            <text class="title">{{item.title}}</text>
+            <!-- <text class="company">{{item.company}}</text>
+            <text class="claim">
+            <text class="city">{{item.city}}</text>
+            <text class="year"> {{item.year}}</text>
+            <text class="edu"> {{item.edu}}</text>
+            </text> -->
+          </view>
+          <!-- <view class="salary">
+            <text>{{item.salary}}</text>
+          </view> -->
+      </view>
+    </block>
+</view>
+</scroll-view>
+
