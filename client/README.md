@@ -30,3 +30,12 @@ Demo
 启动页：
 ![启动页](https://raw.githubusercontent.com/zhuangxiabin/Campus-recruitment-platform-by-WeChat-Mini-Program/master/client/images/welcome-page.jpg
 )
+主页：
+![启动页](https://raw.githubusercontent.com/zhuangxiabin/Campus-recruitment-platform-by-WeChat-Mini-Program/master/client/images/home-page.jpg
+)
+消息列表：
+![启动页](https://raw.githubusercontent.com/zhuangxiabin/Campus-recruitment-platform-by-WeChat-Mini-Program/master/client/images/info-page.jpg
+)
+我的：
+![启动页](https://raw.githubusercontent.com/zhuangxiabin/Campus-recruitment-platform-by-WeChat-Mini-Program/master/client/images/mine.jpg
+)
