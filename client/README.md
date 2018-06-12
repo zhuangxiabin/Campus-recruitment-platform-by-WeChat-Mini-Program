@@ -27,15 +27,15 @@ Demo
 `wafer2-client-sdk` 是[腾讯云wafer2客户端 SDK](https://github.com/tencentyun/wafer2-client-sdk)
 
 ## 系统截图
-启动页：
+### 启动页：
 ![启动页](https://raw.githubusercontent.com/zhuangxiabin/Campus-recruitment-platform-by-WeChat-Mini-Program/master/client/images/welcome-page.jpg
 )
-主页：
+### 主页：
 ![启动页](https://raw.githubusercontent.com/zhuangxiabin/Campus-recruitment-platform-by-WeChat-Mini-Program/master/client/images/home-page.jpg
 )
-消息列表：
+### 推送列表：
 ![启动页](https://raw.githubusercontent.com/zhuangxiabin/Campus-recruitment-platform-by-WeChat-Mini-Program/master/client/images/info-page.jpg
 )
-我的：
+### 我的：
 ![启动页](https://raw.githubusercontent.com/zhuangxiabin/Campus-recruitment-platform-by-WeChat-Mini-Program/master/client/images/mine.jpg
 )
